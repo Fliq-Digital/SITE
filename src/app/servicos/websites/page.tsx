@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Header from "@/src/components/header"
 import Footer from "@/src/components/footer"
 import WhatsAppButton from "@/src/components/whatsapp-button"
+import { StructuredData, serviceSchema } from "@/src/components/structured-data"
+import { SEOHead } from "@/src/components/seo-head"
 import { Button } from "@/src/components/ui/button"
 import { ArrowRight, Check, Zap, Shield, Smartphone } from "lucide-react"
 import { env } from "@/src/lib/env"
@@ -34,8 +36,31 @@ export default function WebsitesPage() {
     }
   }
 
+  const websiteServiceSchema = serviceSchema(
+    "Desenvolvimento de Websites Profissionais",
+    "Criamos websites modernos, responsivos e otimizados para SEO que transformam visitantes em clientes.",
+    "https://fliqdigital.com.br/servicos/websites"
+  )
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <SEOHead
+        title="Desenvolvimento de Websites Profissionais | Fliq"
+        description="Criamos websites modernos, responsivos e otimizados para SEO que transformam visitantes em clientes. Design personalizado, performance otimizada e segurança garantida."
+        keywords={[
+          "desenvolvimento de websites",
+          "criação de sites",
+          "website responsivo",
+          "design de sites",
+          "SEO para websites",
+          "sites profissionais",
+          "web design",
+          "desenvolvimento web"
+        ]}
+        image="/restaurant-website-design.png"
+        url="https://fliqdigital.com.br/servicos/websites"
+      />
+      <StructuredData data={websiteServiceSchema} />
       <Header isDark={isDark} toggleTheme={toggleTheme} />
 
       {/* Hero Section */}

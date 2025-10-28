@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Header from "@/src/components/header"
 import Footer from "@/src/components/footer"
 import WhatsAppButton from "@/src/components/whatsapp-button"
+import { StructuredData, serviceSchema } from "@/src/components/structured-data"
+import { SEOHead } from "@/src/components/seo-head"
 import { Button } from "@/src/components/ui/button"
 import { ArrowRight, Check, ShoppingCart, TrendingUp, Lock } from "lucide-react"
 import { env } from "@/src/lib/env"
@@ -32,8 +34,31 @@ export default function EcommercePage() {
     }
   }
 
+  const ecommerceServiceSchema = serviceSchema(
+    "Desenvolvimento de Ecommerce",
+    "Criamos plataformas de vendas online completas, integradas com pagamento, estoque e logística.",
+    "https://fliqdigital.com.br/servicos/ecommerce"
+  )
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <SEOHead
+        title="Desenvolvimento de Ecommerce | Loja Online Profissional | Fliq"
+        description="Criamos plataformas de vendas online completas, integradas com pagamento, estoque e logística. Ecommerce que vende e converte visitantes em clientes."
+        keywords={[
+          "desenvolvimento de ecommerce",
+          "loja online",
+          "ecommerce profissional",
+          "plataforma de vendas",
+          "loja virtual",
+          "carrinho de compras",
+          "pagamentos online",
+          "gestão de estoque"
+        ]}
+        image="/modern-fashion-ecommerce-store-with-blue-and-cyan-.jpg"
+        url="https://fliqdigital.com.br/servicos/ecommerce"
+      />
+      <StructuredData data={ecommerceServiceSchema} />
       <Header isDark={isDark} toggleTheme={toggleTheme} />
 
       {/* Hero Section */}

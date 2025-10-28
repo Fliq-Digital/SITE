@@ -1,9 +1,9 @@
 export const env = {
-    email: process.env.NEXT_PUBLIC_EMAIL || 'contato@fliqdigital.com',
+    email: process.env.NEXT_PUBLIC_EMAIL || 'contato@fliqdigital.com.br',
     phone: process.env.NEXT_PUBLIC_PHONE || '',
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM || 'fliqdigital',
 
-    privateEmail: process.env.EMAIL || 'contato@fliqdigital.com',
+    privateEmail: process.env.EMAIL || 'contato@fliqdigital.com.br',
     privatePhone: process.env.PHONE || '',
     privateInstagram: process.env.INSTAGRAM || 'fliqdigital',
 } as const;

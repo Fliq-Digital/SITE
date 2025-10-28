@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Header from "@/src/components/header"
 import Footer from "@/src/components/footer"
 import WhatsAppButton from "@/src/components/whatsapp-button"
+import { StructuredData, serviceSchema } from "@/src/components/structured-data"
+import { SEOHead } from "@/src/components/seo-head"
 import { Button } from "@/src/components/ui/button"
 import { ArrowRight, Check, BarChart3, Users, Zap } from "lucide-react"
 import { env } from "@/src/lib/env"
@@ -34,8 +36,31 @@ export default function MidiasSociaisPage() {
     }
   }
 
+  const socialMediaServiceSchema = serviceSchema(
+    "Gestão de Mídias Sociais",
+    "Estratégias completas para crescer sua presença nas redes sociais e engajar seu público.",
+    "https://fliqdigital.com.br/servicos/midias-sociais"
+  )
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <SEOHead
+        title="Gestão de Mídias Sociais | Marketing Digital | Fliq"
+        description="Estratégias completas para crescer sua presença nas redes sociais e engajar seu público. Gestão profissional de Instagram, Facebook, LinkedIn e outras plataformas."
+        keywords={[
+          "gestão de mídias sociais",
+          "marketing digital",
+          "social media",
+          "gestão de redes sociais",
+          "community management",
+          "criação de conteúdo",
+          "campanhas sociais",
+          "engajamento digital"
+        ]}
+        image="/photoLp.png"
+        url="https://fliqdigital.com.br/servicos/midias-sociais"
+      />
+      <StructuredData data={socialMediaServiceSchema} />
       <Header isDark={isDark} toggleTheme={toggleTheme} />
 
       {/* Hero Section */}
