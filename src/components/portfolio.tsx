@@ -8,7 +8,14 @@ const projects = [
     category: "Ecommerce",
     image: "/spaziosite.png",
     description: "Plataforma de vendas de peças automotivas com integração de pagamento e gestão de estoque",
-  }
+  },
+  {
+    id: 2,
+    title: "Ecommerce Macena Fishing",
+    category: "Ecommerce",
+    image: "/macenafishing.png",
+    description: "Plataforma de vendas de equipamentos de pesca com integração de pagamento e gestão de estoque",
+  },
 ]
 
 export default function Portfolio() {
